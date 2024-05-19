@@ -1,0 +1,30 @@
+
+    .esconde {
+        display: none;
+    }
+
+    .container {
+        background-color: rgb(174, 64, 218);
+        border-radius: 5px;
+    }
+
+    .valida {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px black;
+        width: 300px;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    .erroValida {
+        color: red;
+        font-size: 12pt;
+        text-align: center;
+    }
+
+    .cor{
+        color:white;
+        size:12pt;
+        background-color: gray;
+    }

@@ -1,0 +1,116 @@
+/**navbartop**/
+body{
+    margin: 0;
+}
+
+.Navbartop {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 10pt;
+  }
+  
+  .cor {
+    float: left;
+    border-right:1px solid #bbb;
+    background-color: rgb(155, 13, 136);
+  }
+  
+  .cor:last-child {
+    border-right: none;
+  }
+
+  #for{
+    margin: 2% 33%;
+    justify-content: center;
+  }
+  
+  .cor button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .cor button:hover:not(.active) {
+      background-color: #4CAF50;
+  }
+  
+  #titulo {
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 20%;
+
+}
+p{
+    background-color: #F0F8FF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #380B61;
+    justify-items: center;
+
+}
+
+fieldset{
+    border: 0;
+}
+
+body{
+    background-color: #F0F8FF;
+    font-family:  sans-serif;
+    color: #59429d;
+    justify-content: center;
+}
+
+#for{
+  margin: auto;
+  display: grid;
+  font-size: 15pt;
+  margin-top: 25px;
+}
+
+.cliente .campo{
+    margin-right: 10px;
+    
+}
+
+.campo input{
+    padding: 1pt;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px black;
+    display: block;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+.campo{
+
+    margin: 1%;
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #c9c9c9;
+}
+
+#botao{
+   margin-bottom: px;
+    margin: 5%;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+#tela{
+  display: none;
+  width: 200px;
+  background-color: rgb(161, 22, 216);
+  box-shadow: 2px 2px 2px gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+}

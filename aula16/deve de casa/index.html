@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVER DE CASA - QUIZ</title>
+</head>
+<style>
+    #questao2,
+    #questao3,
+    #questao4,
+    #questao5 {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <header>
+        <h1>QUIZ GERAL</h1>
+    </header>
+
+    <div id="questao1">
+        TEMPO:
+        <div id="contador1">
+            20
+        </div>
+        <p>
+            1) A internet foi criada em?
+        </p>
+        <br />
+        <div name="q1a">
+            <input type="radio" name="q1" value="1" id="q1"> 1969 <br />
+        </div>
+        <div name="q1a">
+            <input type="radio" name="q1" value="2" id="q1"> 2000<br />
+        </div>
+        <div name="q1a">
+            <input type="radio" name="q1" value="3" id="q1"> 1800<br />
+        </div>
+        <div name="q1a">
+            <input type="radio" name="q1" value="4" id="q1"> 2010
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <button onclick="proxQuestao()">PRÓXIMA QUESTÃO</button>
+    </div>
+
+    <div id="questao2">
+        <p>
+            2) Qual o primeiro computador eletrônico?
+        </p>
+        <br />
+        <div name="q2a">
+            <input type="radio" name="q2" value="1" id="q2"> Apple <br />
+        </div>
+        <div name="q2a">
+            <input type="radio" name="q2" value="2" id="q2"> IBM<br />
+        </div>
+        <div name="q2a">
+            <input type="radio" name="q2" value="3" id="q2"> Eniac<br />
+        </div>
+        <div name="q2a">
+            <input type="radio" name="q2" value="4" id="q2"> Debian
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <button onclick="proxQuestao()">PRÓXIMA QUESTÃO</button>
+        -
+        <button onclick="antQuestao()">QUESTÃO ANTERIOR</button>
+    </div>
+
+    <div id="questao3">
+        <p>
+            3) qual o nome da primeira linguagem de programação?
+        </p>
+        <br />
+        <div name="q3a">
+            <input type="radio" name="q3" value="1" id="q3"> Fortran <br />
+        </div>
+        <div name="q3a">
+            <input type="radio" name="q3" value="2" id="q3"> Cobol<br />
+        </div>
+        <div name="q3a">
+            <input type="radio" name="q3" value="3" id="q3"> Java<br />
+        </div>
+        <div name="q3a">
+            <input type="radio" name="q3" value="4" id="q3"> C++
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <button onclick="proxQuestao()">PRÓXIMA QUESTÃO</button>
+        -
+        <button onclick="antQuestao()">QUESTÃO ANTERIOR</button>
+    </div>
+
+    <div id="questao4">
+        <p>
+            4) São sistemas operacionais exceto:
+        </p>
+        <br />
+        <div name="q4a">
+            <input type="radio" name="q4" value="1" id="q4"> Windows <br />
+        </div>
+        <div name="q4a">
+            <input type="radio" name="q4" value="2" id="q4"> Macintosh<br />
+        </div>
+        <div name="q4a">
+            <input type="radio" name="q4" value="3" id="q4"> Ubunto<br />
+        </div>
+        <div name="q4a">
+            <input type="radio" name="q4" value="4" id="q4"> Apple
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <button onclick="proxQuestao()">PRÓXIMA QUESTÃO</button>
+        -
+        <button onclick="antQuestao()">QUESTÃO ANTERIOR</button>
+    </div>
+
+    <div id="questao5">
+        <p>
+            5) qual ano estamos?
+        </p>
+        <br />
+        <div name="q5a">
+            <input type="radio" name="q5" id="q5" value="1"> 2020 <br />
+        </div>
+        <div name="q5a">
+            <input type="radio" name="q5" id="q5" value="2"> 2000<br />
+        </div>
+        <div name="q5a">
+            <input type="radio" name="q5" id="q5" value="3"> 2021<br />
+        </div>
+        <div name="q5a">
+            <input type="radio" name="q5" id="q5" value="4"> 1
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <button onclick="resultado()">Finalizar</button>
+        -
+        <button onclick="antQuestao()">QUESTÃO ANTERIOR</button>
+    </div>
+</body>
+<script src="js.js"></script>
+
+</html>

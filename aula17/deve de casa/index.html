@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+</head>
+<style>
+    .barr{
+        width: 50px;
+        margin-left: 10px;
+        border-radius: 3px;
+    }
+
+    #sorteio{
+        width: 250px;
+        box-shadow: 5px 5px 5px 5px gray;
+    }
+
+</style>
+
+<body>
+    <h1>Sorteio</h1>
+    Menor número:
+    <br>
+    <input type="number" class="barr" id="valor1" maxlength="3">
+
+    <br />
+
+    Maior número: 
+    <br>
+    <input type="number" class="barr" id="valor2">
+
+    <br />
+
+    Quantidade de números à serem sorteados:
+    <br>
+    <input type="number" class="barr" id="qtd">
+
+    <br />
+
+
+    Pode repetir os números sorteados.
+    <input type="checkbox" id="repete" value="1">
+    <br />
+    <br />
+
+
+    <button onclick="sorteio()">Sortear</button>
+    
+    <br />
+
+    <div id="sorteio" style="display: none;">
+        <hr />
+        <h2>Números sorteados:</h2>
+        <hr />
+        <span id="numeros"></span>
+    </div>
+
+
+
+</body>
+<script src="./js.js"></script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="formulario">
+        <form name="cadVeiculos" class="form-horizontal">
+            <fieldset>
+
+              
+                <legend>Cadastro de Veículos</legend>
+
+               
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectCadastro">Tipo</label>
+                    <div class="col-md-2">
+                        <select onchange="tipoVeiculo()" id="selectCadastro" name="selectCadastro" class="form-control">
+                            <option value="1">Carro</option>
+                            <option value="2">Moto</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputModelo">Modelo</label>
+                    <div class="col-md-4">
+                        <input id="inputModelo" name="inputModelo" type="text" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputFabricante">Fabricante</label>
+                    <div class="col-md-4">
+                        <input id="inputFabricante" name="inputFabricante" type="text" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputAno">Ano</label>
+                    <div class="col-md-2">
+                        <input id="inputAno" name="inputAno" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputCor">Cor</label>
+                    <div class="col-md-4">
+                        <input id="inputCor" name="inputCor" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                
+                <div class="form-group" id="cambio">
+                    <label class="col-md-4 control-label" for="selectCambio">Câmbio</label>
+                    <div class="col-md-2">
+                        <select id="selectCambio" name="selectCambio" class="form-control">
+                            <option value="1">Manual</option>
+                            <option value="2">Automático</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="form-group" id="motor">
+                    <label class="col-md-4 control-label" for="inputMotor">Motor</label>
+                    <div class="col-md-1">
+                        <input id="inputMotor" name="inputMotor" type="text" placeholder="1.8"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                
+                <div class="form-group" id="ar">
+                    <label class="col-md-4 control-label" for="checkAr">Ar-condicionado</label>
+                    <div class="col-md-4">
+                        <label class="checkbox-inline" for="checkAr-0">
+                            <input type="checkbox" name="checkAr" id="checkAr" value="1">
+                        </label>
+                    </div>
+                </div>
+
+                
+                <div class="form-group" id="cc" style="display: none;">
+                    <label class="col-md-4 control-label" for="inputCc">Cilindrada</label>
+                    <div class="col-md-1">
+                        <input id="inputCc" name="inputCc" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+        </form>
+        
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <br/><br/>
+    <hr/>
+    <br/><br/>
+
+    <button onclick="exibirCadastros()">Exibir Cadastros</button>
+
+    <br/><br/>
+    <hr/>
+    <br/><br/>
+
+    <div id="resultado" style="display: none;">
+        <h3>Veículos Cadastrados</h3>
+        <span id="relatorio"></span>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>

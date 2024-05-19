@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto </title>
+    <link rel="stylesheet" href="HTTPS://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./css.css" type="text/css">
+</head>
+<style>
+
+</style>
+
+<body>
+<header>
+    <!--NAV BAR-->
+    <nav class="navbar navbar-inverse Navbartop">
+
+        <div class="container-fluid navconteudo">
+            <ul class="nav navbar-nav">
+                <li><a onclick="exibeTela(0)" href="#" style="color: black;">Clientes</a></li>
+                <li><a onclick="exibeTela(1)" href="#" style="color: black;">Fucionário</a></li>
+                <li><a onclick="exibeTela(2)" href="#" style="color: black;">Livros</a></li>
+                <li><a onclick="exibeTela(3)" href="#" style="color: black;">Venda</a></li>
+                <li class="nav-item  dropdown">
+                    <a class="nav-link"  href="#" style="color: black;">Relatório</a>
+                    <div class="dropdown-content">
+                      <a onclick="relatoriofunci(),exibeTela(4)" href="#">Funcionário</a>
+                      <a onclick="relatoriocliente(),exibeTela(4)" href="#">cliente</a>
+                      <a onclick="relatorioliv(),exibeTela(4)" href="#">Livros</a>
+                    </div>
+                  
+                  </li>
+            </ul>
+        </div>
+    </nav>
+    <!--FIM NAV BAR-->
+</header>
+<section>
+
+
+    <div id="formCliente" class="container esconde">
+        <!--FORM CLIENTE-->
+        <form class="form-horizontal" name="formCliente">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Cliente</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputNomeCli">Nome</label>
+                    <div class="col-md-4">
+                        <input id="inputNomeCli" name="inputNomeCli" type="text" placeholder="Nome Completo"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input cliente-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputTelCli">Telefone</label>
+                    <div class="col-md-4">
+                        <input id="inputTelCli" name="inputTelCli" type="tel" placeholder="XX XXXXX-XXXX"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputemailCli">Email</label>
+                    <div class="col-md-4">
+                        <input id="inputemailCli" name="inputemailCli" type="Email" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputcpf">CPF</label>
+                    <div class="col-md-3">
+                        <input id="inputcpf" name="inputcpf" type="tel" placeholder="XXX-XXX-XXX-XX" maxlength="11"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button onclick="cadastraCliente()" id="botao">CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM CLIENTE-->
+
+    <div id="formfucionario" class="container esconde">
+        <!--FORM fucionario-->
+        <form class="form-horizontal" name="formfucionario">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Fucionário</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputNomefucionario">Nome</label>
+                    <div class="col-md-5">
+                        <input id="inputNomefucionario" name="inputNomefucionario" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+                <!-- Text input cliente-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputTelfucionari">Telefone</label>
+                    <div class="col-md-4">
+                        <input id="inputTelfucionari" name="inputTelfucionari" type="tel" placeholder="XX XXXXX-XXXX"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputemailfucionario">Email</label>
+                    <div class="col-md-4">
+                        <input id="inputemailfucionario" name="inputemailfucionario" type="Email"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+                
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="inputCPFfucionario">CPF</label>
+                        <div class="col-md-4">
+                            <input id="inputCPFfucionario" name="inputCPFfucionario" type="tel" placeholder="XXX-XXX-XXX-XX" maxlength="11"
+                                class="form-control input-md">
+    
+                        </div>
+                    </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputenderecofucionario">Endereço</label>
+                    <div class="col-md-4">
+                        <input id="inputenderecofucionario" name="inputenderecofucionario" type="text"
+                            placeholder="Rua***,***" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="inputfiliacao">Filiação</label>
+                        <div class="col-md-4">
+                            <input id="inputfiliacao" name="inputfiliacao" type="text" placeholder=""
+                                class="form-control input-md">
+
+                        </div>
+                    </div>
+            </fieldset>
+        </form>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button onclick="cadastrafucionario()"  id="botao" >CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM fucionario-->
+
+    <div id="formlivro" class="container esconde">
+        <!--FORM livro-->
+
+        <form class="form-horizontal" name="formlivro">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de livro</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputtitulivro">Título</label>
+                    <div class="col-md-5">
+                        <input id="inputtitulivro" name="inputtitulivro" type="text" placeholder="Título"
+                            class="form-control input-md" >
+
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputautor">Autor</label>
+                    <div class="col-md-4">
+                        <input id="inputautor"  name="inputautor" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputgenero">Gênero</label>
+                    <div class="col-md-4">
+                        <input id="inputgenero" name="inputgenero" type="text" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputpreco">Preço</label>
+                    <div class="col-md-2">
+                      <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input id="inputpreco" name="inputpreco" class="form-control" placeholder="" type="tel">
+                      </div>
+                    </div>
+                  </div>
+                  
+            </fieldset>
+        </form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button onclick="cadastralivro()" id="botao">CADASTRAR</button>
+            </div>
+        </div>
+    </div><!-- FIM FORM livro-->
+
+
+    <div id="formvenda" class="container esconde">
+        <!--FORM venda-->
+
+        <form class="form-horizontal" name="formvenda">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Compra Livro</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputcompratit">Título</label>
+                    <div class="col-md-4">
+                        <input id="inputcompratit" name="inputcompratit" type="text" placeholder=""
+                            class="form-control input-md" onchange="validalivro()">
+
+                    </div>
+                </div>
+                <span id="validalivro"></span>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputvedfucinario">Nome do vedendo</label>
+                    <div class="col-md-4">
+                        <input id="inputvedfucinario" onchange="validafucionario()" name="inputvedfucinario" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+                <span id="validafucionario"></span>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputcomprado">Nome do cliente</label>
+                    <div class="col-md-4">
+                        <input id="inputcomprado" name="inputcomprado" type="text" placeholder=""
+                            class="form-control input-md" onchange="validaCliente()">
+
+                    </div>
+                </div>
+                <span id="validaCliente"></span>
+            </fieldset>
+        </form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button onclick="cadastraPedido()" id="botao">Compra</button>
+            </div>
+        </div>
+    </div><!-- FIM FORM venda-->
+
+    <div id="Relatorio" class="container esconde">
+        <!--relatorio-->
+
+        <div id="tela" style="display: none;">
+            <span id="dados">
+                <div class="fun"></div>
+                <div class="cli"></div>
+                <div class="liv"></div>
+            </span>
+        </div>
+    </div><!-- FIM -->
+
+</section>
+</body>
+<script src="./js.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+</html>

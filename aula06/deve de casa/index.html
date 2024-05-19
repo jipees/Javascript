@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="./stilo.css" type="text/css">
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="caculadora">
+            <label for="calcu">
+                <h1>Calculadora</h1>
+            </label>
+            <input type="text" id="visortxt" />
+            <table>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="limpar()">C</button></td>
+                    <td><button class="botao" onclick="operadores('/')">/</button></td>
+                    <td><button class="botao" onclick="operadores('*')">*</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="botao" onclick="numero(7)">7</button></td>
+                    <td><button class="botao" onclick="numero(8)">8</button></td>
+                    <td><button class="botao" onclick="numero(9)">9</button></td>
+                    <td><button class="botao" onclick="operadores('-')">-</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="botao" onclick="numero(4)">4</button></td>
+                    <td><button class="botao" onclick="numero(5)">5</button></td>
+                    <td><button class="botao" onclick="numero(6)">6</button></td>
+                    <td><button class="botao" onclick="operadores('+')">+</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="botao" onclick="numero(1)">1</button></td>
+                    <td><button class="botao" onclick="numero(2)">2</button></td>
+                    <td><button class="botao" onclick="numero(3)">3</button></td>
+                    <td rowspan="2"><button class="botao" style="height: 106px; width: 49px;"
+                            onclick="calcula()">=</button></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 106px;" onclick="numero(0)">0</button></td>
+                    <td><button class="botao" onclick="numero('.')">.</button></td>
+                </tr>
+            </table>
+            <div>
+                <textarea id="historico"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

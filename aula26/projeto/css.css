@@ -1,0 +1,90 @@
+
+    body{
+        margin: 0;
+    }
+    /*navbar*/
+    .Navbartop {
+       
+        color:black;
+       
+        background-color: rgb(255, 208, 0);
+       
+      }
+      li a:hover, .dropdown:hover .barraop {
+        background-color: cadetblue;
+      }
+      
+      li.dropdown {
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: rgb(0, 0, 0);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1;}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+/*fim*/
+    .esconde {
+        display: none;
+    }
+
+    .container {
+
+        width: 50%;
+        text-align: center;
+        background-color: rgb(223, 210, 210);
+        border-radius: 5px;
+    }
+
+    .valida {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px black;
+        width: 300px;
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    .erroValida {
+        color: red;
+        font-size: 12pt;
+        text-align: center;
+    }
+
+    #botao{
+        background: rgb(122, 120, 120);
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #botao:hover
+{
+        color:white;
+        border-radius:10%;
+
+}
+#tela{
+    display: none;
+    background-color: rgb(214, 197, 221);
+    box-shadow: 2px 2px 2px rgb(7, 7, 7);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    
+  }

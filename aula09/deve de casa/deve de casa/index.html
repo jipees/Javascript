@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./estilo.css" type="text/css">
+</head>
+
+<body>
+
+    <ul class="Navbartop">
+        <li class="cor"><button class="cor" onclick="consu()">Consultar</button></li>
+        <li class="cor"><button class="cor" onclick="doador()">Doador</button></li>
+        <li class="cor"><button class="cor" onclick="imc()">IMC</button></li>
+    </ul>
+
+    <div id="for">
+        <div id="titulo">
+            <h2>Cadastro</h3>
+                <p>preencha o Formulário</p>
+        </div>
+        <form name="cadastro">
+
+            <fieldset class="cliente">
+
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" required id="nometxt">
+                </div>
+
+                <div class="campo">
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" id="idadetxt">
+                </div>
+
+                <div class="campo">
+                    <label for="peso">Peso</label>
+                    <input type="number" name="peso" id="pesotxt">
+                </div>
+
+                <div class="campo">
+                    <label for="altura">Altura</label>
+                    <input type="number" name="altura" id="alturatxt">
+                </div>
+            </fieldset>
+        </form>
+        <button id="botao" onclick="cadastrar()">cadastra</button>
+        <div id="tela">
+            <span id="dados">
+                <div class="pessoas"></div>
+            </span>
+        </div>
+    </div>
+</body>
+<script src="./js.js"></script>
+
+</html>

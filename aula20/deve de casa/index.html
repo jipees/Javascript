@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVER DE CASA</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./cs.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active dropdown">
+        <a class="nav-link">Cadastrar</a>
+        <div class="dropdown-content">
+          <a onclick="exibeElemento('formCadastro')" href="#">Funcionário</a>
+          <a onclick="exibeElemento('formCadastrocliente')" href="#">cliente</a>
+          <a onclick="exibeElemento('formCadastroproduto')" href="#">Produto</a>
+        </div>
+      
+      </li>
+        <li class="nav-item active dropdown">
+          <a class="nav-link">lista</a>
+          <div class="dropdown-content">
+            <a onclick="exibeFuncionarios(),exibeElemento('listaf')"  href="#">Exibir Funcionários</a>
+            <a  onclick="exibecliente(),exibeElemento('listac')" href="#">Exibir cliente</a>
+            <a  onclick="exibeproduto(),exibeElemento('listap')" href="#">Exibir Produto</a>
+          </div>
+    </ul>
+  </nav>
+
+  <div id="formCadastro" class="container jumbotron esconde">
+    <form class="form-horizontal" name="formFunc">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Cadastro de Funcionários</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputNome">Nome</label>
+          <div class="col-md-5">
+            <input id="inputNome" name="inputNome" type="text" placeholder="Nome Completo"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputNascimento">Data de Nascimento</label>
+          <div class="col-md-3">
+            <input id="inputNascimento" name="inputNascimento" type="date" placeholder="xx/xx/xxxx"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputTelefone">Telefone</label>
+          <div class="col-md-2">
+            <input id="inputTelefone" name="inputTelefone" type="tel" placeholder="(xx) xxxxx-xxxx"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputEmail">E-mail</label>
+          <div class="col-md-4">
+            <input id="inputEmail" name="inputEmail" type="email" placeholder="usaurio@provedor.com"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+
+
+      </fieldset>
+    </form>
+
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-4">
+        <button onclick="cadastrarFuncionario()" class="btn btn-info">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="formCadastrocliente" class="container jumbotron esconde">
+    <form class="form-horizontal" name="formcli">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Cadastro de cliente</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputNome">Nome</label>
+          <div class="col-md-5">
+            <input id="inputNomec" name="inputNome" type="text" placeholder="Nome Completo"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputTelefone">Telefone</label>
+          <div class="col-md-2">
+            <input id="inputTelefonec" name="inputTelefone" type="tel" placeholder="(xx) xxxxx-xxxx"
+              class="form-control input-md">
+
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-4">
+        <button onclick="cadastrarCliente()" class="btn btn-info">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="formCadastroproduto" class="container jumbotron esconde">
+    <form class="form-horizontal" name="formpro">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Cadastro Produto</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputNome">Nome</label>
+          <div class="col-md-5">
+            <input id="inputNomep" name="inputNome" type="text" placeholder="Nome Completo"
+              class="form-control input-md">
+
+          </div>
+        </div>
+
+
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputpreco">preço</label>
+          <div class="col-md-2">
+            <input id="inputpreco" name="inputpreco" type="number" placeholder="R$" class="form-control input-md">
+
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="inputfabri">Fabricante</label>
+          <div class="col-md-4">
+            <input id="inputfabri" name="inputfabri" type="email"  class="form-control input-md">
+
+          </div>
+        </div>
+
+
+
+      </fieldset>
+    </form>
+
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-4">
+        <button onclick="cadastrarProduto()" class="btn btn-info">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="listaf" class="container jumbotron esconde">
+    <h2> Cadastrados Funcionário</h2>
+    <hr />
+    
+
+    <span id="resultadosf" class="container"></span>
+
+  </div>
+
+  <div id="listac" class="container jumbotron esconde">
+    <h2> Cadastrado cliente</h2>
+    <hr />
+    
+
+    <span id="resultadosc" class="container"></span>
+
+  </div>
+  <div id="listap" class="container jumbotron esconde">
+    <h2> Cadastrados produto</h2>
+    <hr />
+    
+
+    <span id="resultadosp" class="container"></span>
+
+  </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="./js.js"></script>
+
+</html>

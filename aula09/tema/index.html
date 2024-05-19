@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <form class="form-horizontal" name="cadastro">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Cadastro de Pessoas</legend>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nometxt">Nome</label>
+                    <div class="col-md-5">
+                        <input id="nometxt" name="nometxt" type="text" placeholder="Nome Completo"
+                            class="form-control input-md">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="idadetxt">Idade</label>
+                    <div class="col-md-1">
+                        <input id="idadetxt" name="idadetxt" type="number" placeholder="xx"
+                            class="form-control input-md">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="pesotxt">Peso (Kg)</label>
+                    <div class="col-md-2">
+                        <input id="pesotxt" name="pesotxt" type="number" placeholder="xx" class="form-control input-md">
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="alturatxt">Altura (cm)</label>
+                    <div class="col-md-2">
+                        <input id="alturatxt" name="alturatxt" type="text" placeholder="180"
+                            class="form-control input-md">
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for=""></label>
+                    <div class="col-md-4">
+                        <input type="button" value="Cadastrar" onclick="cadastrar()" class="btn btn-info">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <button class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
+    </div>
+    <hr>
+    <button class="btn btn-info" onclick="consultar()">consultar</button>
+
+    <br>
+
+    <button class="btn btn-primary" onclick="cadastroporidade()">
+        cadastrado maior idade
+    </button>
+
+    <button class="btn btn-caution" onclick="consultaporidade()">consultaporidade</button>
+
+    <div id="consulta">
+        <h3>Pessoas cadastradas</h3>
+        <hr>
+        <span id="dados"></span>
+    </div>
+
+</body>
+<script src="./scrip.js"></script>
+<style>
+    #consulta {
+        display: none;
+        margin-top: 30px;
+    }
+
+    .pessoa {
+        width: 250px;
+        background-color: lightblue;
+        box-shadow: 2px, 2px, 2px, grey;
+        padding: 10px;
+        margin: 10px;
+        border: solid grey;
+    }
+</style>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document object</object></title>
+    <link rel="stylesheet" href="./css/stilo.css" type="text/css">
+</head>
+<body>
+    <h1 id="titulo1" onmouseover="trocatitulio('titulo1')" onmouseout="trocatitulo('titulo1')">manipulando objetos</h1>
+    <p id="p1" onclick="trocacor('p1')">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore nihil maxime sed ad! Illum neque temporibus ex ratione cupiditate quam? Molestiae sunt provident officia ea magni cumque ad recusandae?
+    </p>
+    <p id="p2" ondblclick="trocacor('p2')">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui asperiores assumenda velit a molestias dolor ullam consequatur laudantium deleniti, facilis omnis similique voluptatibus temporibus eos, ab impedit nulla ipsam quisquam.
+    </p>
+    tema noturno: <input type="checkbox" onchange="mudatema()">
+
+    <span id="tema">modo claro</span>
+    <br><br>
+    <input type="button" id="btn-titulo" value="Tira Titulo" onclick="tiraObjeto('titulo1','btn-titulo')">
+</body>
+<script src="./js/scrip.js"></script>
+</html>

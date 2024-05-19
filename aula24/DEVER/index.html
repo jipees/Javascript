@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="HTTPS://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css.css" type="text/css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <!--NAV BAR-->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lanchonete</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a onclick="exibeTela(0)" href="#">Clientes</a></li>
+                <li><a onclick="exibeTela(1)" href="#">Lanches</a></li>
+                <li><a onclick="exibeTela(2)" href="#">Sucos</a></li>
+                <li><a onclick="exibeTela(3)" href="#">Entregadores</a></li>
+                <li><a onclick="exibeTela(4)" href="#">Pedidos</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--FIM NAV BAR-->
+
+    <h1>Sistema de Lanchonete</h1>
+    <hr />
+
+    <div id="formCliente" class="container esconde">
+        <!--FORM CLIENTE-->
+        <form class="form-horizontal" name="formCliente">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Cliente</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputNomeCli">Nome</label>
+                    <div class="col-md-5">
+                        <input id="inputNomeCli" name="inputNomeCli" type="text" placeholder="Nome Completo"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputTelCli">Telefone</label>
+                    <div class="col-md-4">
+                        <input id="inputTelCli" name="inputTelCli" type="tel" placeholder="XX XXXXX-XXXX"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputEnderecoCli">Endereço</label>
+                    <div class="col-md-4">
+                        <input id="inputEnderecoCli" name="inputEnderecoCli" type="text" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="cor" onclick="cadastraCliente()" class="btn btn-success">CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM CLIENTE-->
+
+    <div id="formLanche" class="container esconde">
+        <!--FORM LANCHE-->
+        <form class="form-horizontal" name="formLanche">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Lanche</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputNomeLanc">Nome</label>
+                    <div class="col-md-5">
+                        <input id="inputNomeLanc" name="inputNomeLanc" type="text" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIngredienteLanc">Ingredientes</label>
+                    <div class="col-md-4">
+                        <input id="inputIngredienteLanc" name="inputIngredienteLanc" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputPrecoLanc">Preço</label>
+                    <div class="col-md-4">
+                        <input id="inputPrecoLanc" name="inputPrecoLanc" type="number" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="cor" onclick="cadastraLanche()" class="btn btn-success">CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM LANCHE-->
+
+
+    <div id="formSuco" class="container esconde">
+        <!--FORM SUCO-->
+
+        <form class="form-horizontal" name="formSuco">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Suco</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIngredienteSuco">Ingredientes</label>
+                    <div class="col-md-4">
+                        <input id="inputIngredienteSuco" name="inputIngredienteSuco" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputPrecoSuco">Preço</label>
+                    <div class="col-md-4">
+                        <input id="inputPrecoSuco" name="inputPrecoSuco" type="number" placeholder=""
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="cor" onclick="cadastraSuco()" class="btn btn-success">CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM LANCHE-->
+
+    <div id="formEntregador" class=" container esconde">
+        <!--FORM CLIENTE-->
+
+        <form class="form-horizontal" name="formEntregador">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Entregador</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputNomeEntregador">Nome</label>
+                    <div class="col-md-5">
+                        <input id="inputNomeEntregador" name="inputNomeEntregador" type="text"
+                            placeholder="Nome Completo" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputTelCli">Telefone</label>
+                    <div class="col-md-4">
+                        <input id="inputTelCli" name="inputTelCli" type="tel" placeholder="XX XXXXX-XXXX"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="cor" onclick="cadastraCliente()" class="btn btn-success">CADASTRAR</button>
+            </div>
+        </div>
+
+    </div><!-- FIM FORM Entregador-->
+
+    <div id="formPedido" class="container esconde">
+        <!--FORM PEDIDO-->
+
+        <form class="form-horizontal" name="formPedido">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Cadastro de Pedido</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIdCli">Nome do Cliente</label>
+                    <div class="col-md-5">
+                        <input id="inputIdCli" name="inputIdCli" type="text" placeholder="Nome"
+                            class="form-control input-md" onchange="validaCliente()">
+
+                    </div>
+                </div>
+                <span id="validaCliente"></span>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIdLanche">Nome do Lanche</label>
+                    <div class="col-md-4">
+                        <input id="inputIdLanche" onchange="validaLanche()" name="inputIdLanche" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+                <span id="validaLanche"></span>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIdSuco">ID do Suco</label>
+                    <div class="col-md-4">
+                        <input id="inputIdSuco" name="inputIdSuco" type="text" placeholder=""
+                            class="form-control input-md" onchange="validaSuco()">
+
+                    </div>
+                </div>
+                <span id="validaSuco"></span>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="inputIdEntregador">Nome do Entregador</label>
+                    <div class="col-md-5">
+                        <input id="inputIdEntregador" name="inputIdEntregador" type="text"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <button class="cor" onclick="cadastraPedido()" class="btn btn-success">CADASTRAR</button>
+            </div>
+        </div>
+    </div><!-- FIM FORM CLIENTE-->
+
+</body>
+<script src="./js.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+</html>
